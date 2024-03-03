@@ -1,0 +1,44 @@
+<!-- <ngb-timepicker
+	[(ngModel)]="time"
+	[seconds]="true"
+	[hourStep]="hourStep"
+	[minuteStep]="minuteStep"
+	[secondStep]="secondStep"
+></ngb-timepicker>
+
+<div class="row">
+	<div class="col-sm-3">
+		<label for="changeHourStep">Hour Step</label>
+		<input id="changeHourStep" type="number" class="form-control form-control-sm" [(ngModel)]="hourStep" />
+	</div>
+	<div class="col-sm-3">
+		<label for="changeMinuteStep">Minute Step</label>
+		<input id="changeMinuteStep" type="number" class="form-control form-control-sm" [(ngModel)]="minuteStep" />
+	</div>
+	<div class="col-sm-3">
+		<label for="changeSecondStep">Second Step</label>
+		<input id="changeSecondStep" type="number" class="form-control form-control-sm" [(ngModel)]="secondStep" />
+	</div>
+</div>
+<hr />
+<pre>Selected time: {{time | json}}</pre> -->
+
+
+
+<countdown [config]="{leftTime: 30 }"></countdown>
+
+<br>
+
+<button  (click)="clickCount.resume()">Start</button>
+<button  (click)="clickCount.stop()">Stop</button>
+<button  (click)="clickCount.pause()">Pause</button>
+<button  (click)="clickCount.restart()">Restart</button>
+
+<countdown  #clickCount [config]="{leftTime: 30 ,demand:true}"></countdown>
+
+
+
+<div class="countdown-timer">
+    <h2>Countdown Timer</h2>
+    <p>Time remaining: {{ countdown }}</p>
+  </div>

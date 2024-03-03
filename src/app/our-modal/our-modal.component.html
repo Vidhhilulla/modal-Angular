@@ -1,0 +1,23 @@
+<ng-template #content let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Sorry Time Out!!!</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+       <p>
+        The time for game is over!!
+        Better luck next time..
+       </p>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-outline-dark ourButton" (click)="modal.close('Retry')">Retry</button>
+        <button type="button" class="btn btn-outline-dark ourButton" (click)="modal.close('Go to home page')">Go to home page</button>
+
+	</div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
+
+<hr />
+
+<pre>{{ closeResult }}</pre>
