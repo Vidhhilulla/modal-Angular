@@ -1,0 +1,15 @@
+<section class="flex-container">
+    <div class="game">
+        <div class="container-fluid">
+            <button type="button" class="quit-btn">QUIT</button>
+            <h1 class="title pt-3" >Card Matching</h1>
+            <div class="centre-box">
+                <button class="tile" *ngFor="let card of selectedObjects3" (click)="onCardClick(card)" [disabled]="card.isSelected" [ngClass]="{'selected': card.number === selectedCard}" >
+                    Card 
+                    <button *ngIf="card.isSelected" class="color-display" [disabled]="card.isSelected"  [style.background-color]="card.color"></button>
+                </button>
+            </div>
+            <!-- <img class="imgg" src="https://tse2.mm.bing.net/th?id=OIP.1xocAnWoa8IrXHU4UpYYRAHaHa&pid=Api&P=0&h=180" alt=""> -->
+        </div>
+    </div>
+</section>

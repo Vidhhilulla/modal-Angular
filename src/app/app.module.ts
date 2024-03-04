@@ -9,6 +9,7 @@ import { NgbTimepickerModule, NgbTimeStruct } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { JsonPipe } from '@angular/common';
 import { CountdownModule } from 'ngx-countdown';
+import { GamesModule } from './games/games.module';
 
 
 @NgModule({
@@ -21,14 +22,12 @@ import { CountdownModule } from 'ngx-countdown';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    GamesModule,
     NgbModule,
     NgbTimepickerModule,
     FormsModule,
     JsonPipe,
     CountdownModule
-
-
-
   ],
   providers: [],
   bootstrap: [AppComponent]
